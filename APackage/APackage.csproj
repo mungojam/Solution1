@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageVersion>1.0.6</PackageVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <None Remove="content.txt" />
+      <Content Include="some-content.txt" />
+        <None Remove="build\APackage.targets" />
+      <Content Include="build\APackage.targets">
+          <Pack>true</Pack>
+          <PackagePath>build</PackagePath>
+      </Content>
+      <Content Include="build\APackage.targets">
+          <Pack>true</Pack>
+          <PackagePath>buildMultiTargeting</PackagePath>
+          <Link>buildMultiTargeting\APackage.targets</Link>
+      </Content>
+        
+    </ItemGroup>
+
+</Project>

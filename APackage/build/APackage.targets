@@ -1,0 +1,5 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <ItemGroup>
+        <None Include="$(MSBuildThisFileDirectory)..\contentFiles\any\netcoreapp3.1\**" CopyToOutputDirectory="Always" Link="%(RecursiveDir)\%(Filename)%(Extension)" />
+    </ItemGroup>
+</Project>
